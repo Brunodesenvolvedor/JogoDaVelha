@@ -1,0 +1,28 @@
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Jogodavelha\bin\Debug\net8.0\jogodavelha.exe
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Jogodavelha\bin\Debug\net8.0\jogodavelha.deps.json
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Jogodavelha\bin\Debug\net8.0\jogodavelha.runtimeconfig.json
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Jogodavelha\bin\Debug\net8.0\jogodavelha.dll
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Jogodavelha\bin\Debug\net8.0\jogodavelha.pdb
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Jogodavelha\obj\Debug\net8.0\jogodavelha.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Jogodavelha\obj\Debug\net8.0\jogodavelha.AssemblyInfoInputs.cache
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Jogodavelha\obj\Debug\net8.0\jogodavelha.AssemblyInfo.cs
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Jogodavelha\obj\Debug\net8.0\jogodavelha.csproj.CoreCompileInputs.cache
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Jogodavelha\obj\Debug\net8.0\jogodavelha.dll
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Jogodavelha\obj\Debug\net8.0\refint\jogodavelha.dll
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Jogodavelha\obj\Debug\net8.0\jogodavelha.pdb
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Jogodavelha\obj\Debug\net8.0\jogodavelha.genruntimeconfig.cache
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Jogodavelha\obj\Debug\net8.0\ref\jogodavelha.dll
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Repositório de algorítmos C#\Jogodavelha\bin\Debug\net8.0\jogodavelha.exe
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Repositório de algorítmos C#\Jogodavelha\bin\Debug\net8.0\jogodavelha.deps.json
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Repositório de algorítmos C#\Jogodavelha\bin\Debug\net8.0\jogodavelha.runtimeconfig.json
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Repositório de algorítmos C#\Jogodavelha\bin\Debug\net8.0\jogodavelha.dll
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Repositório de algorítmos C#\Jogodavelha\bin\Debug\net8.0\jogodavelha.pdb
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Repositório de algorítmos C#\Jogodavelha\obj\Debug\net8.0\jogodavelha.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Repositório de algorítmos C#\Jogodavelha\obj\Debug\net8.0\jogodavelha.AssemblyInfoInputs.cache
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Repositório de algorítmos C#\Jogodavelha\obj\Debug\net8.0\jogodavelha.AssemblyInfo.cs
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Repositório de algorítmos C#\Jogodavelha\obj\Debug\net8.0\jogodavelha.csproj.CoreCompileInputs.cache
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Repositório de algorítmos C#\Jogodavelha\obj\Debug\net8.0\jogodavelha.dll
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Repositório de algorítmos C#\Jogodavelha\obj\Debug\net8.0\refint\jogodavelha.dll
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Repositório de algorítmos C#\Jogodavelha\obj\Debug\net8.0\jogodavelha.pdb
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Repositório de algorítmos C#\Jogodavelha\obj\Debug\net8.0\jogodavelha.genruntimeconfig.cache
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Repositório de algorítmos C#\Jogodavelha\obj\Debug\net8.0\ref\jogodavelha.dll
