@@ -12,7 +12,7 @@ Este é um projeto em C# que implementa um jogo da velha no console, com regras 
 3. Compile e execute o projeto.
 
 ## Licença
-Este projeto está licenciado sob a [MIT License](LICENSE).
+Este projeto está licenciado sob a LGPL-2.1.
 
 ## Futuras atualizações
 Futuras atualizações incluem: 
