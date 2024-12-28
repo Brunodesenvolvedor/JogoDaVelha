@@ -1,6 +1,13 @@
-﻿using System;
+﻿// Criar uma branch para treinar e subir como está. Falta colocar opção de escolha em francês. Depois, alterar as variáveis para combinarem com os textos dos resources. 
+
+
+using System;
 using System.Text;
 using Jogodavelha;
+using System.Resources; // Acesso aos Resources
+using System.Globalization; // Acesso ao "Culture info"
+
+// Instalei duas extensões. Uma extensão para usar Recursos com o comando: dotnet add package System.Resources.Extensions ; a segunda para o usar o Globalization (Culture info) com o comando: dotnet add package System.Globalization
 
 namespace JogodaVelha
 {
@@ -14,7 +21,14 @@ namespace JogodaVelha
             Console.OutputEncoding = Encoding.UTF8;
             Console.InputEncoding = Encoding.UTF8;
 
+            // Determina o idioma como francês (e o arquivo a ser lido o strings.fr.resx)
+            CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");
+
+            // Instancia um ResourceManager. Ele acessa os recursos dos arquivos resx que eu criei.
+            ResourceManager rm = new ResourceManager("JOGODAVELHA.Resources.Strings", typeof(Program).Assembly);
+
             Console.Clear();
+            Console.WriteLine(rm.GetString("Titulo"));
             Console.WriteLine("JOGO DA VELHA");
             Console.WriteLine("");
 
@@ -49,7 +63,3 @@ namespace JogodaVelha
         }
     }
 }
-
-
-
-

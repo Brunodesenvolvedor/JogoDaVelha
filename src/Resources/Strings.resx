@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="Titulo" xml:space="preserve">
+    <value>JOGO DA VELHA</value>
+  </data>
+<data name="EscolhaIcone" xml:space="preserve">
+  <value>Você prefere jogar com o 'O' (1) ou com o 'X' (2)?</value>
+</data>
+<data name="EscolhaIconeO" xml:space="preserve">
+  <value>Muito bem, você será o 'O' e o computador será o 'X'</value>
+</data>
+<data name="EscolhaIconeX" xml:space="preserve">
+  <value>Muito bem, você será o 'X' e o computador será o 'O'</value>
+</data>
+<data name="EscolhaInvalida" xml:space="preserve">
+  <value>Entrada inválida. Você precisa escolher 'O' (1) ou 'X' (2).</value>
+</data>
+  <data name="MensagemQuemJogaPrimeiro" xml:space="preserve">
+    <value>Neste jogo, é escolhido aleatoriamente quem inicia. Desta vez, {0} começa.</value>
+  </data>
+  <data name="JogadaInvalida" xml:space="preserve">
+    <value>Essa não é uma jogada válida. Escolha um número válido (1 a 9) que esteja livre:</value>
+  </data>
+  <data name="EntradaInvalida" xml:space="preserve">
+    <value>Entrada inválida. Insira um número entre 1 e 9.</value>
+  </data>
+  <data name="ParabensVenceu" xml:space="preserve">
+    <value>O jogo encerrou. Parabéns, você venceu\nPressione enter para encerrar</value>
+  </data>
+  <data name="ComputadorVenceu" xml:space="preserve">
+    <value>O jogo encerrou. O computador venceu\nPressione enter para encerrar</value>
+  </data>
+  <data name="JogoEmpatou" xml:space="preserve">
+    <value>O jogo empatou\nPressione enter para encerrar</value>
+  </data>
+  <data name="JogadaComputador" xml:space="preserve">
+    <value>Na vez do computador, ele jogou na posição {0}</value>
+  </data>
+  <data name="MensagemSuaVez" xml:space="preserve">
+    <value>Sua vez: escolha o número da posição em que deseja jogar.</value>
+  </data>
+  <data name="JogadaPosicao" xml:space="preserve">
+    <value>Você jogou na posição {0}</value>
+  </data>
+</root>
+

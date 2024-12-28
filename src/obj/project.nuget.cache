@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "o0ceNdv/pMSWkFvWhg7++nmYo3BmNZXD3+g01NyE0/N7CAOMhenq5JIySlcKrAK5LL1GZTg6iWrH1Cf/JWNreQ==",
+  "success": true,
+  "projectFilePath": "D:\\Pasta do Bruno\\Profissionais\\Programação\\Estudo\\C#\\Repositório de algorítmos C#\\Jogodavelha\\src\\jogodavelha.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\marco\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\marco\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\marco\\.nuget\\packages\\system.collections.immutable\\9.0.0\\system.collections.immutable.9.0.0.nupkg.sha512",
+    "C:\\Users\\marco\\.nuget\\packages\\system.formats.nrbf\\9.0.0\\system.formats.nrbf.9.0.0.nupkg.sha512",
+    "C:\\Users\\marco\\.nuget\\packages\\system.globalization\\4.3.0\\system.globalization.4.3.0.nupkg.sha512",
+    "C:\\Users\\marco\\.nuget\\packages\\system.reflection.metadata\\9.0.0\\system.reflection.metadata.9.0.0.nupkg.sha512",
+    "C:\\Users\\marco\\.nuget\\packages\\system.resources.extensions\\9.0.0\\system.resources.extensions.9.0.0.nupkg.sha512",
+    "C:\\Users\\marco\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}
