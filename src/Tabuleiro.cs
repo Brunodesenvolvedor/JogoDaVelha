@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Resources; // Acesso aos Resources
 
 namespace Jogodavelha
 {
@@ -17,25 +18,26 @@ namespace Jogodavelha
         }
 
         // Método que recebe o ícone escolhido pelo jogador, exibe um while até que o ícone seja válido. O return encerra o while, retornando o ícone escolhido pelo jogador.
-        public static char EscolhaIcone ()
+        // Passei como parâmetro o Resource Manager.
+        public static char EscolhaIcone (ResourceManager rm)
         {
             while (true)
             {
-                Console.WriteLine("Você prefere jogar com o 'O' (1) ou com o 'X' (2)?");
+                Console.WriteLine(rm.GetString("EscolhaIcone"));
                 string escolha = Console.ReadLine();
 
                 switch (escolha)
                 {
                     case "1":
-                        Console.WriteLine("Muito bem, você será o 'O' e o computador será o 'X'");
+                        Console.WriteLine(rm.GetString("EscolhaIconeO"));
                         return 'O';
 
                     case "2":
-                        Console.WriteLine("Muito bem, você será o 'X' e o computador será o 'O'");
+                        Console.WriteLine(rm.GetString("EscolhaIconeX"));
                         return 'X';
                     
                     default:
-                        Console.WriteLine("Entrada inválida. Você precisa escolher 'O' (1) ou 'X' (2).");
+                        Console.WriteLine(rm.GetString("EscolhaInvalida"));
                         break; // Volta ao início do loop
                 }
             }

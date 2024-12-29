@@ -3,31 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using JogodaVelha;
+using System.Resources; // Acesso aos Resources
 
 namespace Jogodavelha
 {
     class Jogadas
     {  
         // Usei if ternário (se for par true, senão false)
-        public static bool QuemJogaPrimeiro()
+        // Para o método acessar o ResourceManager, é preciso indicá-lo tanto aqui quanto nas chamadas do método no program.
+        public static bool QuemJogaPrimeiro(ResourceManager rm)
         {
             Random random = new Random();
             int JogaPrimeiro = random.Next(1, 11);
 
-            Console.WriteLine($"Neste jogo, é escolhido aleatoriamente quem inicia. Desta vez, {(JogaPrimeiro % 2 == 0 ? "você" : "o computador")} começa.");
+            string voceOuComputador = JogaPrimeiro % 2 == 0 ? rm.GetString("Voce") : rm.GetString("Computador");
+
+            // A linha abaixo não funcionaria como 'Console.WriteLine(rm.GetString("MensagemQuemJogaPrimeiro"), voceOuComputador);', pois esse método não suporta placeholder {0}. Cumpre usar esse string.Format no lugar: ele recebe a string numa variável. 
+            string mensagem = string.Format(rm.GetString("MensagemQuemJogaPrimeiro"), voceOuComputador);
+
+            Console.WriteLine(mensagem);
 
             // Essa expressão já retorna um booleano, então não preciso de um if 
             return JogaPrimeiro % 2 == 0;
         }
   
-        public static void ValidarJogada(int jogadaAValidar, char icone)
+        public static void ValidarJogada(int jogadaAValidar, char icone, ResourceManager rm)
         {
             while (true) 
             {
                 // Verifica se a jogada está fora do intervalo permitido ou se a posição já está ocupada.
                 if (jogadaAValidar < 1 || jogadaAValidar > 9 || Program.tabuleiro[jogadaAValidar - 1] == 'O' || Program.tabuleiro[jogadaAValidar - 1] == 'X')
                 {
-                    Console.WriteLine("Essa não é uma jogada válida. Escolha um número válido (1 a 9) que esteja livre:");
+                    Console.WriteLine(rm.GetString("JogadaInvalida"));
 
                     // Solicita uma nova entrada e valida novamente.
                     if (int.TryParse(Console.ReadLine(), out int novaJogada))
@@ -36,7 +43,7 @@ namespace Jogodavelha
                     }
                     else
                     {
-                        Console.WriteLine("Entrada inválida. Insira um número entre 1 e 9.");
+                        Console.WriteLine(rm.GetString("EntradaInvalida"));
                     }
                 }
                 else
@@ -88,7 +95,7 @@ namespace Jogodavelha
             return false;
         }
 
-        public static void VezComputador()
+        public static void VezComputador(ResourceManager rm)
         {
             Random random = new Random();
 
@@ -99,7 +106,7 @@ namespace Jogodavelha
 
                 if (Program.tabuleiro[jogadadoComputador - 1] != Program.iconeJogador && Program.tabuleiro[jogadadoComputador - 1] != Program.iconeComputador)
                 {
-                Jogadas.ValidarJogada(jogadadoComputador, Program.iconeComputador);
+                Jogadas.ValidarJogada(jogadadoComputador, Program.iconeComputador, rm);
 
                 Console.Clear();
                 Console.WriteLine("Na vez do computador, ele jogou na posição {0}", jogadadoComputador);
@@ -111,13 +118,13 @@ namespace Jogodavelha
         }
 
         // Método que acolhe e registra a vez do jogador, depois valida a jogada e registra (por outro método), por fim, verifica se resultou em fim do jogo (outro método) 
-        public static void VezJogador()
+        public static void VezJogador(ResourceManager rm)
         {
             Console.WriteLine("Sua vez: escolha o número da posição em que deseja jogar.");
 
             int jogada = int.Parse(Console.ReadLine());
 
-            ValidarJogada(jogada,Program.iconeJogador);
+            ValidarJogada(jogada,Program.iconeJogador, rm);
 
             Console.Clear();
             Console.WriteLine("Você jogou na posição {0}", jogada);

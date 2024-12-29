@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
+  <data name="ValidaIdioma" xml:space="preserve">
+    <value>Muito bem, o jogo será apresentado em português</value>
+  </data>
   <data name="Titulo" xml:space="preserve">
     <value>JOGO DA VELHA</value>
   </data>
@@ -14,6 +17,12 @@
 </data>
 <data name="EscolhaInvalida" xml:space="preserve">
   <value>Entrada inválida. Você precisa escolher 'O' (1) ou 'X' (2).</value>
+  </data>
+  <data name="Voce" xml:space="preserve">
+    <value>Você</value>
+  </data>
+    <data name="Computador" xml:space="preserve">
+  <value>o computador</value>
 </data>
   <data name="MensagemQuemJogaPrimeiro" xml:space="preserve">
     <value>Neste jogo, é escolhido aleatoriamente quem inicia. Desta vez, {0} começa.</value>
