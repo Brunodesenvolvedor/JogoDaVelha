@@ -62,6 +62,7 @@ namespace JogodaVelha
 
             Console.WriteLine("");            
             Console.WriteLine(rm.GetString("Titulo"));
+            Console.WriteLine("");
             // Escolha de ícone e lógica para atribuir o ícone do computador. Usei if ternário para reduzir o código (se jogador for 'O', computador recebe 'X', senão 'O').
             // Aqui foi preciso passar como parâmetro o Resource Manager
             iconeJogador = Tabuleiro.EscolhaIcone(rm);
@@ -78,13 +79,13 @@ namespace JogodaVelha
             {
                 if (jogadorPrimeiro)
                 {
-                    Tabuleiro.ExibirTabuleiro(tabuleiro);
+                    Tabuleiro.ExibirTabuleiro(tabuleiro, rm);
                     Console.WriteLine("");
                     Jogadas.VezJogador(rm); // Jogada do jogador
                 }
                 else
                 {
-                    Tabuleiro.ExibirTabuleiro(tabuleiro);
+                    Tabuleiro.ExibirTabuleiro(tabuleiro, rm);
                     Console.WriteLine("");
                     Jogadas.VezComputador(rm); // Jogada do computador
                 }
@@ -94,3 +95,5 @@ namespace JogodaVelha
         }
     }
 }
+
+

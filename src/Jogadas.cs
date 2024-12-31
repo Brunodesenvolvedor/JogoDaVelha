@@ -55,7 +55,7 @@ namespace Jogodavelha
             }
         }
 
-        public static bool VerificaVencedor(char icone)
+        public static bool VerificaVencedor(char icone, ResourceManager rm)
         {
             // Verifica combinações vencedoras
             if (
@@ -71,13 +71,13 @@ namespace Jogodavelha
             {
                 if (icone == Program.iconeJogador)
                 {
-                    Tabuleiro.ExibirTabuleiro(Program.tabuleiro);
-                    Console.WriteLine("O jogo encerrou. Parabéns, você venceu\nPressione enter para encerrar");
+                    Tabuleiro.ExibirTabuleiro(Program.tabuleiro, rm);
+                    Console.WriteLine(rm.GetString("ParabensVenceu"));
                 }
                 else
                 {
-                    Tabuleiro.ExibirTabuleiro(Program.tabuleiro);
-                    Console.WriteLine("O jogo encerrou. O computador venceu\nPressione enter para encerrar");
+                    Tabuleiro.ExibirTabuleiro(Program.tabuleiro, rm);
+                    Console.WriteLine(rm.GetString("ComputadorVenceu"));
                 }
                 Console.ReadLine();
                 Environment.Exit(0);
@@ -86,8 +86,8 @@ namespace Jogodavelha
             // Verifica empate (tabuleiro cheio e nenhuma vitória)
             if (Program.tabuleiro.All(c => c == 'O' || c == 'X'))
             {
-                Tabuleiro.ExibirTabuleiro(Program.tabuleiro);
-                Console.WriteLine("O jogo empatou\nPressione enter para encerrar");
+                Tabuleiro.ExibirTabuleiro(Program.tabuleiro, rm);
+                Console.WriteLine(rm.GetString("JogoEmpatou"));
                 Console.ReadLine();
                 return true;
             }
@@ -109,9 +109,9 @@ namespace Jogodavelha
                 Jogadas.ValidarJogada(jogadadoComputador, Program.iconeComputador, rm);
 
                 Console.Clear();
-                Console.WriteLine("Na vez do computador, ele jogou na posição {0}", jogadadoComputador);
-
-                Jogadas.VerificaVencedor(Program.iconeComputador);
+                string mensagemJogada = string.Format(rm.GetString("JogadaComputador"), jogadadoComputador);
+                Console.WriteLine(mensagemJogada);
+                Jogadas.VerificaVencedor(Program.iconeComputador, rm);
                 break;
                 }
             }
@@ -120,17 +120,16 @@ namespace Jogodavelha
         // Método que acolhe e registra a vez do jogador, depois valida a jogada e registra (por outro método), por fim, verifica se resultou em fim do jogo (outro método) 
         public static void VezJogador(ResourceManager rm)
         {
-            Console.WriteLine("Sua vez: escolha o número da posição em que deseja jogar.");
-
+            Console.WriteLine(rm.GetString("MensagemSuaVez"));
             int jogada = int.Parse(Console.ReadLine());
 
             ValidarJogada(jogada,Program.iconeJogador, rm);
 
             Console.Clear();
-            Console.WriteLine("Você jogou na posição {0}", jogada);
+            string mensagemJogada = string.Format(rm.GetString("JogadaPosicao"), jogada);
+            Console.WriteLine(mensagemJogada);
             
-            Jogadas.VerificaVencedor(Program.iconeJogador);
+            Jogadas.VerificaVencedor(Program.iconeJogador, rm);
         }
     }
 }
-

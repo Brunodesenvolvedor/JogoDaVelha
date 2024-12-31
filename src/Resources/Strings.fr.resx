@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <root>
   <data name="ValidaIdioma" xml:space="preserve">
-    <value>Très bien. Le jeu sera présenté en français</value>
+    <value>Très bien. Le jeu sera présenté en français.</value>
   </data>
   <data name="Titulo" xml:space="preserve">
     <value>MORPION</value>
   </data>
   <data name="EscolhaIcone" xml:space="preserve">
-    <value>Vous préférez jouer avec le 'O' (1) ou avec le 'X' (2)?</value>
+    <value>Vous préférez jouer avec le "O" (1) ou avec le "X" (2)?</value>
   </data>
   <data name="EscolhaIconeO" xml:space="preserve">
-    <value>Très bien, vous serez le 'O' et l'ordinateur sera le 'X'</value>
+    <value>Très bien, vous serez le "O" et l'ordinateur sera le "X".</value>
   </data>
   <data name="EscolhaIconeX" xml:space="preserve"> <!-- Aqui foi corrigido -->
-    <value>Très bien, vous serez le 'X' et l'ordinateur sera le 'O'</value>
+    <value>Très bien, vous serez le "X" et l'ordinateur sera le "O".</value>
   </data>
   <data name="EscolhaInvalida" xml:space="preserve">
-    <value>Entrée invalide. Vous devez choisir 'O' (1) ou 'X' (2).</value>
+    <value>Entrée invalide. Vous devez choisir "O" (1) ou "X" (2).</value>
   </data>
   <data name="Voce" xml:space="preserve">
   <value>Vous</value>
@@ -27,6 +27,9 @@
   <data name="MensagemQuemJogaPrimeiro" xml:space="preserve">
     <value>Dans ce jeu, celui qui commence est choisi aléatoirement. Cette fois, {0} commence.</value>
   </data>
+  <data name="Tabuleiro" xml:space="preserve">
+    <value>Plateau</value>
+  </data>
   <data name="JogadaInvalida" xml:space="preserve">
     <value>Ceci n'est pas un coup valide. Choisissez un numéro valide (1 à 9) qui est libre :</value>
   </data>
@@ -34,22 +37,25 @@
     <value>Entrée invalide. Donnez un numéro entre 1 et 9.</value>
   </data>
   <data name="ParabensVenceu" xml:space="preserve">
-    <value>Le jeu est terminé. Félicitations, vous avez gagné\nAppuyez sur Entrée pour terminer le programme</value>
+    <value>Le jeu est terminé. Félicitations, vous avez gagné.
+    Appuyez sur Entrée pour terminer le programme</value>
   </data>
   <data name="ComputadorVenceu" xml:space="preserve">
-    <value>Le jeu est terminé. L'ordinateur a gagné\nAppuyez sur Entrée pour terminer le programme</value>
+    <value>Le jeu est terminé. L'ordinateur a gagné. 
+Appuyez sur Entrée pour terminer le programme.</value>
   </data>
   <data name="JogoEmpatou" xml:space="preserve">
-  <value>Le jeu est terminé sur un match nul\nAppuyez sur Entrée pour terminer</value>
+  <value>Le jeu est terminé sur un match nul.
+Appuyez sur Entrée pour terminer.</value>
 </data>
 <data name="JogadaComputador" xml:space="preserve">
-  <value>Lors du tour de l'ordinateur, il a joué à la position {0}</value>
+  <value>Lors du tour de l'ordinateur, il a joué à la position {0}.</value>
 </data>
 <data name="MensagemSuaVez" xml:space="preserve">
   <value>À votre tour : choisissez le numéro de la position où vous souhaitez jouer.</value>
 </data>
 <data name="JogadaPosicao" xml:space="preserve">
-  <value>Vous avez joué à la position {0}</value>
+  <value>Vous avez joué à la position {0}.</value>
 </data>
 
 </root>
