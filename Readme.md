@@ -16,10 +16,10 @@ Este é um projeto em C# que implementa um jogo da velha no console, com regras 
 ## Licença
 Este projeto está licenciado sob a LGPL-2.1.
 
-## Futuras atualizações
+## Atualizações
 Futuras atualizações incluem: 
 - Integração com banco de dados. O programa gerará um código único para cada partida e registrará a ordem das jogadas, as quais serão armazenadas no banco de dados por meio do Entity Framework. Com isso, será possível consultar jogos antigos também.
-- Possibilidade de seleção do idioma português/francês ao inicializar o programa.
+- Possibilidade de seleção do idioma português/francês ao inicializar o programa (implementada dia 30\12\204).
 
 
 # En français
