@@ -39,4 +39,4 @@ Ce projet est sous licence LGPL-2.1.
 ## Futures mises à jour
 Les futures mises à jour incluent:
 - L'intégration avec une base de données. Le programme générera un code unique por chaque partie et enregistrera l'ordre des coups. Ils seront enregistrés dans la base de données à travers de Entity Framework. Ainsi, il sera possible de consulter les anciennes parties. 
-- La possibilité de selecionner la langue portugaise ou la langue française au debut du jeu.
+- La possibilité de selecionner la langue portugaise ou la langue française au debut du jeu (mis en œuvre le 30\12\204).
