@@ -3,15 +3,19 @@ using System.Text;
 using Jogodavelha;
 using System.Resources; // Acesso aos Resources
 using System.Globalization; // Acesso ao "Culture info"
+using System.Data.SqlClient; // Para usar comandos SQL
 
 // Instalei duas extensões. Uma extensão para usar Recursos com o comando: dotnet add package System.Resources.Extensions ; a segunda para o usar o Globalization (Culture info) com o comando: dotnet add package System.Globalization
 
 namespace JogodaVelha
 {
-    class Program
+    public class Program
     {
         public static char[] tabuleiro = new char[9] {'1', '2', '3', '4', '5', '6', '7', '8', '9'};
         public static char iconeJogador, iconeComputador;
+
+        // Conexão com o banco de dados (tornei uma variável global e estática, mas poderia passá-la como parâmetro para as classes que a usam)
+        public static string connectionString = "Server=localhost;Database=JogoDaVelha; User Id=Bruno; Password=parabolica;Trusted_Connection=False";
 
         static void Main(string[] args)
         {
@@ -92,6 +96,30 @@ namespace JogodaVelha
                 // Alterna a vez entre jogador e computador
                 jogadorPrimeiro = !jogadorPrimeiro;
             }            
+        }
+
+        public static void SalvarPartida(string connectionString, string vencedor, DateTime dataHora)
+        {
+            // Comando SQL para inserir os dados
+            string query = @"
+                INSERT INTO Partidas (Vencedor, DataHora)
+                VALUES (@Vencedor, @DataHora)";
+
+            // Conexão com o banco
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    // Adiciona os parâmetros ao comando
+                    command.Parameters.AddWithValue("@Vencedor", vencedor);
+                    command.Parameters.AddWithValue("@DataHora", dataHora);
+
+                    // Executa o comando
+                    command.ExecuteNonQuery();
+                }
+            }
         }
     }
 }

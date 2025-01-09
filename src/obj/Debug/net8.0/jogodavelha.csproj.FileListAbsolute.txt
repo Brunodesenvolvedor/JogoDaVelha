@@ -25,3 +25,9 @@ D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Repositório de algorít
 D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Repositório de algorítmos C#\Jogodavelha\src\obj\Debug\net8.0\jogodavelha.Resources.Strings.fr.resources
 D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Repositório de algorítmos C#\Jogodavelha\src\obj\Debug\net8.0\fr\jogodavelha.resources.cs
 D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Repositório de algorítmos C#\Jogodavelha\src\obj\Debug\net8.0\fr\jogodavelha.resources.dll
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Repositório de algorítmos C#\Jogodavelha\src\bin\Debug\net8.0\System.Data.SqlClient.dll
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Repositório de algorítmos C#\Jogodavelha\src\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Repositório de algorítmos C#\Jogodavelha\src\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Repositório de algorítmos C#\Jogodavelha\src\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Repositório de algorítmos C#\Jogodavelha\src\bin\Debug\net8.0\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+D:\Pasta do Bruno\Profissionais\Programação\Estudo\C#\Repositório de algorítmos C#\Jogodavelha\src\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Data.SqlClient.dll

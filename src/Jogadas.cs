@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using JogodaVelha;
 using System.Resources; // Acesso aos Resources
+using System.Data.SqlClient;
 
 namespace Jogodavelha
 {
@@ -71,11 +72,19 @@ namespace Jogodavelha
             {
                 if (icone == Program.iconeJogador)
                 {
+                    string vencedor = icone == Program.iconeJogador ? "Jogador" : "Computador";
+                    DateTime dataHora = DateTime.Now; 
+                    Program.SalvarPartida(Program.connectionString, vencedor, dataHora);
+
                     Tabuleiro.ExibirTabuleiro(Program.tabuleiro, rm);
                     Console.WriteLine(rm.GetString("ParabensVenceu"));
                 }
                 else
                 {
+                    string vencedor = icone == Program.iconeComputador ? "Jogador" : "Computador";
+                    DateTime dataHora = DateTime.Now; 
+                    Program.SalvarPartida(Program.connectionString, vencedor, dataHora);
+
                     Tabuleiro.ExibirTabuleiro(Program.tabuleiro, rm);
                     Console.WriteLine(rm.GetString("ComputadorVenceu"));
                 }
@@ -86,6 +95,11 @@ namespace Jogodavelha
             // Verifica empate (tabuleiro cheio e nenhuma vitória)
             if (Program.tabuleiro.All(c => c == 'O' || c == 'X'))
             {
+
+                string vencedor = "Empate";
+                DateTime dataHora = DateTime.Now;
+                Program.SalvarPartida(Program.connectionString, vencedor, dataHora);
+
                 Tabuleiro.ExibirTabuleiro(Program.tabuleiro, rm);
                 Console.WriteLine(rm.GetString("JogoEmpatou"));
                 Console.ReadLine();
