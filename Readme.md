@@ -13,6 +13,16 @@ Este é um projeto em C# que implementa um jogo da velha no console, com regras 
 2. Abra o arquivo `JogodaVelha.sln` no Visual Studio.
 3. Compile e execute o projeto.
 
+## Instruções para a configuração do Banco de Dados
+
+1. Configure um banco de dados SQL Server ou SQLite.
+2. Execute o arquivo `schema.sql` (da pasta database) para criar as tabelas.
+3. Adicione sua string de conexão ao arquivo `appsettings.json` ou configure a variável de ambiente `DB_CONNECTION_STRING`.
+
+Exemplo de string de conexão (SQL Server):
+Server=localhost;Database=JogodaVelha;User Id=SeuUsuario;Password=SuaSenha;
+
+
 ## Licença
 Este projeto está licenciado sob a LGPL-2.1.
 

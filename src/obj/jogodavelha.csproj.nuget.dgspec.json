@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Pasta do Bruno\\Profissionais\\Programação\\Estudo\\C#\\Repositório de algorítmos C#\\Jogodavelha\\src\\jogodavelha.csproj": {}
+    "D:\\Pasta do Bruno\\Profissionais\\Programação\\Estudo\\C#\\Repositório de algorítmos C#\\JogoDaVelha\\src\\jogodavelha.csproj": {}
   },
   "projects": {
-    "D:\\Pasta do Bruno\\Profissionais\\Programação\\Estudo\\C#\\Repositório de algorítmos C#\\Jogodavelha\\src\\jogodavelha.csproj": {
+    "D:\\Pasta do Bruno\\Profissionais\\Programação\\Estudo\\C#\\Repositório de algorítmos C#\\JogoDaVelha\\src\\jogodavelha.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pasta do Bruno\\Profissionais\\Programação\\Estudo\\C#\\Repositório de algorítmos C#\\Jogodavelha\\src\\jogodavelha.csproj",
+        "projectUniqueName": "D:\\Pasta do Bruno\\Profissionais\\Programação\\Estudo\\C#\\Repositório de algorítmos C#\\JogoDaVelha\\src\\jogodavelha.csproj",
         "projectName": "jogodavelha",
-        "projectPath": "D:\\Pasta do Bruno\\Profissionais\\Programação\\Estudo\\C#\\Repositório de algorítmos C#\\Jogodavelha\\src\\jogodavelha.csproj",
+        "projectPath": "D:\\Pasta do Bruno\\Profissionais\\Programação\\Estudo\\C#\\Repositório de algorítmos C#\\JogoDaVelha\\src\\jogodavelha.csproj",
         "packagesPath": "C:\\Users\\marco\\.nuget\\packages\\",
-        "outputPath": "D:\\Pasta do Bruno\\Profissionais\\Programação\\Estudo\\C#\\Repositório de algorítmos C#\\Jogodavelha\\src\\obj\\",
+        "outputPath": "D:\\Pasta do Bruno\\Profissionais\\Programação\\Estudo\\C#\\Repositório de algorítmos C#\\JogoDaVelha\\src\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marco\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -67,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.111/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.112/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

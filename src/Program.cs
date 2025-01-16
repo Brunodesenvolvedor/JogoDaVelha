@@ -5,8 +5,6 @@ using System.Resources; // Acesso aos Resources
 using System.Globalization; // Acesso ao "Culture info"
 using System.Data.SqlClient; // Para usar comandos SQL
 
-// Instalei duas extensões. Uma extensão para usar Recursos com o comando: dotnet add package System.Resources.Extensions ; a segunda para o usar o Globalization (Culture info) com o comando: dotnet add package System.Globalization
-
 namespace JogodaVelha
 {
     public class Program
@@ -15,12 +13,27 @@ namespace JogodaVelha
         public static char iconeJogador, iconeComputador;
 
         // Conexão com o banco de dados (tornei uma variável global e estática, mas poderia passá-la como parâmetro para as classes que a usam)
-        public static string connectionString = "Server=localhost;Database=JogoDaVelha; User Id=Bruno; Password=parabolica;Trusted_Connection=False";
+        public static string connectionString = "Server=localhost\\SQLEXPRESS;Database=JogoDaVelha;Trusted_Connection=True;";
 
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
             Console.InputEncoding = Encoding.UTF8;
+
+            // Testa a conexão com o banco de dados
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    Console.WriteLine("Conexão com o banco de dados foi bem-sucedida!");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erro ao conectar ao banco de dados: {ex.Message}");
+                return; // Encerra o programa se a conexão falhar
+            }
 
             // Instancia um ResourceManager. Ele acessa os recursos dos arquivos resx que eu criei.
             ResourceManager rm = new ResourceManager("JOGODAVELHA.Resources.Strings", typeof(Program).Assembly);
@@ -52,7 +65,6 @@ namespace JogodaVelha
                     // Determina o idioma como francês (e o arquivo a ser lido o strings.fr.resx)
                     CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");
                     Console.WriteLine(rm.GetString("ValidaIdioma"));
-                    // Determina o idioma como francês (e o arquivo a ser lido o strings.fr.resx)
                     escolhaLingua = false;
                     break;
 
@@ -67,7 +79,7 @@ namespace JogodaVelha
             Console.WriteLine("");            
             Console.WriteLine(rm.GetString("Titulo"));
             Console.WriteLine("");
-            // Escolha de ícone e lógica para atribuir o ícone do computador. Usei if ternário para reduzir o código (se jogador for 'O', computador recebe 'X', senão 'O').
+            // Escolha de ícone e lógica para atribuir o ícone do computador. Usei if ternário para reduzir o código (se jogador for 'O', computador recebe 'X', senão 'O'). 
             // Aqui foi preciso passar como parâmetro o Resource Manager
             iconeJogador = Tabuleiro.EscolhaIcone(rm);
             iconeComputador = iconeJogador == 'O' ? 'X' : 'O';
@@ -77,8 +89,6 @@ namespace JogodaVelha
             bool jogadorPrimeiro = Jogadas.QuemJogaPrimeiro(rm);
             // se false computador, se true jogador.
             // while verificavencedor false, looping de jogadas
- 
-            // A exclamação do começo nega o retorno false natural do método, ou seja, enquanto o valor for falso, o laço continua. 
             while (true)
             {
                 if (jogadorPrimeiro)
@@ -95,33 +105,49 @@ namespace JogodaVelha
                 }
                 // Alterna a vez entre jogador e computador
                 jogadorPrimeiro = !jogadorPrimeiro;
-            }            
+            }
         }
 
-        public static void SalvarPartida(string connectionString, string vencedor, DateTime dataHora)
+        public static void SalvarPartida(string connectionString, string vencedor, DateTime dataHora, string jogador, int posicao, int ordem)
         {
-            // Comando SQL para inserir os dados
-            string query = @"
+            // Comando SQL para inserir os dados na tabela Partidas
+            string queryPartida = @"
                 INSERT INTO Partidas (Vencedor, DataHora)
-                VALUES (@Vencedor, @DataHora)";
-
+                VALUES (@Vencedor, @DataHora);
+                SELECT SCOPE_IDENTITY();"; // Retorna o ID da última partida inserida
+            
             // Conexão com o banco
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
-                using (SqlCommand command = new SqlCommand(query, connection))
+                using (SqlCommand commandPartida = new SqlCommand(queryPartida, connection))
                 {
-                    // Adiciona os parâmetros ao comando
-                    command.Parameters.AddWithValue("@Vencedor", vencedor);
-                    command.Parameters.AddWithValue("@DataHora", dataHora);
+                    // Adiciona os parâmetros ao comando para a partida
+                    commandPartida.Parameters.AddWithValue("@Vencedor", vencedor);
+                    commandPartida.Parameters.AddWithValue("@DataHora", dataHora);
 
-                    // Executa o comando
-                    command.ExecuteNonQuery();
+                    // Executa o comando e obtém o ID da partida recém-inserida
+                    int partidaId = Convert.ToInt32(commandPartida.ExecuteScalar());
+
+                    // Agora insere as jogadas
+                    string queryJogadas = @"
+                        INSERT INTO Jogadas (PartidaId, Jogador, Posicao, ordem)
+                        VALUES (@PartidaId, @Jogador, @Posicao, @ordem)";
+
+                    using (SqlCommand commandJogadas = new SqlCommand(queryJogadas, connection))
+                    {
+                        // Adiciona os parâmetros ao comando para as jogadas
+                        commandJogadas.Parameters.AddWithValue("@PartidaId", partidaId);
+                        commandJogadas.Parameters.AddWithValue("@Jogador", jogador);
+                        commandJogadas.Parameters.AddWithValue("@Posicao", posicao != -1 ? (object)posicao : DBNull.Value); // Tratamento para posição nula
+                        commandJogadas.Parameters.AddWithValue("@ordem", ordem);
+
+                        // Executa o comando para inserir as jogadas
+                        commandJogadas.ExecuteNonQuery();
+                    }
                 }
             }
         }
     }
 }
-
-
